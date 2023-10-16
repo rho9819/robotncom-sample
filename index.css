@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    overflow: hidden;
+    background-color: rgb(102, 102, 102);
+}
+
+._container_w3brx_142 ._marker_w3brx_156 {
+    position: relative;
+    z-index: 4;
+    width: 8px;
+    height: 8px;
+    background: #c6ccd7;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+._zoomable{
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    transition: all 2s;
+}
+
+.position{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.position svg {
+    margin-right: 100px;
+}
+
+.section_background{
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    /* overflow: hidden; */
+}
+
+.introduction{
+    display: flex;
+    flex-direction: column;
+    padding: 250px 0px 0px 300px;
+    justify-content: center;
+}
+
+.introduction:nth-child(1) {
+    color: #095FB0;
+    font-size: 18px;
+    letter-spacing: .1em;
+    font-family: Montserrat,"Noto Sans KR",sans-serif;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.yearhide {
+    height: 190px;
+    overflow: hidden;
+    position: relative;
+}
+
+.year {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    font-size: 96px;
+    margin-bottom: 36px;
+    font-weight: 300;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.year.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.bold{
+    font-weight: bold;
+}
+
+.introductionTextmain{
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.introductionText{
+    position: absolute;
+    font-weight: 200;
+    transform: translate(0px, 0px);
+    opacity: 1;
+    font-size: 18px;
+    line-height: 2;
+    font-weight: 500;
+    color: #b4b4b4;
+    letter-spacing: -.025em; 
+    margin-bottom: 40px;
+    transform: translateY(300px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.introductionText.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.imageList{
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.imageList .image{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    transform: translateY(100%);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.image.active{
+    opacity: 1;
+    transform: translateY(0);
+    
+}
