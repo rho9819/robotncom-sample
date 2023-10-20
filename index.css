@@ -6,6 +6,7 @@
 body{
     overflow: hidden;
     background-color: rgb(102, 102, 102);
+    /* position: relative; */
 }
 
 ._container_w3brx_142 ._marker_w3brx_156 {
@@ -17,7 +18,14 @@ body{
     transform: translateZ(0);
     backface-visibility: hidden;
 }
+  
+
 ._zoomable{
+    transform-origin: 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+
     height: 100vh;
     position: fixed;
     width: 100%;
@@ -28,15 +36,6 @@ body{
     transition: all 2s;
 }
 
-.position{
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-}
-
-.position svg {
-    margin-right: 100px;
-}
 
 .section_background{
     position: absolute;
@@ -46,7 +45,7 @@ body{
     width: 100vw;
     height: 100vh;
     z-index: 100;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .introduction{
@@ -82,6 +81,7 @@ body{
     transform: translateY(100%);
     transition: opacity 0.5s, transform 0.5s;
 }
+
 .year.active {
     opacity: 1;
     transform: translateY(0);
@@ -112,6 +112,7 @@ body{
     transform: translateY(300px);
     transition: opacity 0.5s, transform 0.5s;
 }
+
 .introductionText.active {
     opacity: 1;
     transform: translateY(0);
@@ -129,12 +130,11 @@ body{
     right: 0;
     width: 50vw;
     height: 100vh;
-    transform: translateY(100%);
+    transform: translateX(100%);
     transition: opacity 0.5s, transform 0.5s;
 }
 
 .image.active{
     opacity: 1;
-    transform: translateY(0);
-    
+    transform: translateX(0);
 }
